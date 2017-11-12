@@ -74,16 +74,8 @@ i { animation-duration: 2.5s; animation-delay: 1s }
 s { animation-duration: 2s; animation-delay: 0s }
 h { animation-duration: 3.75s; animation-delay: 0.25s }
 
-t::before, t::after,
-u::before, u::after,
-r::before, r::after,
-b::before, b::after,
-o::before, o::after,
-f::before, f::after,
-i::before, i::after,
-s::before, s::after,
-h::before, h::after {
-    content: '∶';
+.fishtail {
+    content: ':∶';
     order: -1;
     display: block;
 
@@ -91,19 +83,6 @@ h::before, h::after {
     animation-duration: .2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-}
-
-t::after,
-u::after,
-r::after,
-b::after,
-o::after,
-f::after,
-i::after,
-s::after,
-h::after {
-    animation-delay: 0.05s;
-    animation-direction: reverse;
 }
 
 @keyframes turbo {

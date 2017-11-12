@@ -4,8 +4,6 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
-
 <title>::<​{{ guts }}></title>
 
 <link rel="stylesheet" href="normalize.css">
@@ -21,9 +19,26 @@
 <s><​{{ guts }}></s>
 <h><​{{ guts }}></h>
 
+<script>
+	var tailsize = 0;
+	var url_path = document.location.pathname.substr(1);
+	for(const letter of url_path) {
+		if(letter == ':') {
+			tailsize += 1;
+		}
+	}
+	const tail = ":".repeat(tailsize);
+	for(const l of "turbofish") {
+		const e = document.createElement("div");
+		e.textContent = tail;
+		e.classList.add('fishtail');
+		document.querySelector(l).appendChild(e);
+}
+</script>
+
 <footer>
     <a href="https://www.reddit.com/r/rust/comments/3fimgp/why_double_colon_rather_that_dot/ctozkd0/#ctozkd0">what?</a>
     <a href="https://matematikaadit.github.io/posts/rust-turbofish.html">what??</a>
-    <a href="https://github.com/jplatte/turbo.fish">code.</a>
+    <a href="https://github.com/imnotbad/turbo.fish">code.</a>
     <a href="/random">random!</a>
 </footer>
