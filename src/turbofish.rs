@@ -18,7 +18,7 @@ impl<'a> FromParam<'a> for TurboFish {
         let mut param_content = String::new();
         if param_cow.starts_with(':') && param_cow.ends_with('>') {
             for (i, letter) in param_cow.char_indices() {
-                if letter == ':' && param_cow.chars().nth(i+1) == Some('<') {
+                if letter == ':' && param_cow.chars().nth(i+1) == Ok('<') {
                     param_content = param_cow.split_at(i+1).1.to_string();
                     break
                 
