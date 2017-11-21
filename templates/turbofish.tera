@@ -25,6 +25,8 @@
 	for(const letter of url_path) {
 		if(letter == ':') {
 			tailsize += 1;
+		} else {
+			break;
 		}
 	}
 	const tail = ":".repeat(tailsize);
