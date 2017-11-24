@@ -2,6 +2,9 @@
 authors = ["Jonas Platte <jplatte+git@posteo.de>", "Kaidan <fishstacks@protonmail.com>"]
 name = "turbofish"
 version = "0.1.1"
+license = "AGPL-3.0+"
+name = "turbofish"
+repository = "https://github.com/imnotbad/turbo.fish"
 
 [dependencies]
 rand = "0.3.17"
